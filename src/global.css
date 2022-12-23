@@ -23,6 +23,6 @@ html {
 }
 
 body {
+  height: 100vh;
   font-family: "Space Mono", monospace;
-  background: var(--dm-black);
 }
