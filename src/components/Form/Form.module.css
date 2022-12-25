@@ -1,0 +1,24 @@
+.form-search {
+  display: flex;
+  align-items: center;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  gap: 0.4rem;
+}
+
+.search-btn {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  color: var(--dm-white);
+  background-color: var(--light-blue);
+  border: none;
+  font-family: "Space Mono", monospace;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background-color: #4d9efc;
+}

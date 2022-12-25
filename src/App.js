@@ -1,6 +1,7 @@
 import { Component, Fragment } from "react";
 import classes from "./App.module.css";
 import Header from "./components/Header/Header";
+import Form from "./components/Form/Form";
 
 class App extends Component {
   constructor() {
@@ -30,6 +31,7 @@ class App extends Component {
               isLight={this.state.isLight}
               isLightHandler={this.toggleThemeHandler.bind(this)}
             />
+            <Form isLight={this.state.isLight} />
           </div>
         </main>
       </Fragment>
