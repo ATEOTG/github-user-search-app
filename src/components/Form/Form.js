@@ -59,7 +59,7 @@ class Form extends Component {
 
   async searchUser(user) {
     const response = await fetch(`https://api.github.com/users/${user}`, {
-      headers: {
+      header: {
         Authorization:
           "Bearer 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",
       },
