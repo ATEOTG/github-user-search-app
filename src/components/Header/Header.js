@@ -14,12 +14,6 @@ class Header extends Component {
           devfinder
         </h1>
         <div className={classes["theme-cont"]}>
-          <p
-            className={classes["theme-text"]}
-            style={{ color: !this.props.isLight ? "#ffffff" : "#2b3442" }}
-          >
-            {!this.props.isLight ? "LIGHT" : "DARK"}
-          </p>
           {!this.props.isLight ? (
             <Sun isLightHandler={this.props.isLightHandler} />
           ) : (

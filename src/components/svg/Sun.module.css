@@ -1,0 +1,27 @@
+.theme-text {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 2.5px;
+  color: #ffffffff;
+}
+
+.theme-cont {
+  display: flex;
+  gap: 1.5em;
+  cursor: pointer;
+}
+
+.theme-cont p {
+  transition: 0.3s;
+}
+
+.theme-cont:hover p {
+  color: #90a4d4;
+}
+
+.theme-cont svg path {
+  transition: 0.3s;
+}
+.theme-cont:hover svg path {
+  fill: #90a4d4;
+}

@@ -1,12 +1,13 @@
 .display-cont {
   border-radius: 1.5rem;
-  padding: 2rem;
+  padding: 3.5rem 2rem 4rem 2rem;
 }
 
 .display-primary-cont {
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .display-primary {
@@ -31,4 +32,59 @@
 
 .date {
   font-size: 1.3rem;
+}
+
+.biography {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.numbers-cont {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 2rem 4rem;
+  margin-bottom: 2rem;
+}
+
+.number-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.number-text {
+  font-size: 1.1rem;
+}
+
+.number-info {
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.details-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-cont {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.detail-cont p {
+  font-size: 1.3rem;
+}
+
+.detail-cont a {
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.detail-cont a:hover,
+.detail-cont a:active {
+  text-decoration: underline;
 }
