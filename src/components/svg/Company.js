@@ -3,12 +3,7 @@ import { Component } from "react";
 class Company extends Component {
   render() {
     return (
-      <svg
-        style={{ minHeight: "20px", minWidth: "20px" }}
-        height="20"
-        width="20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
         <g
           style={{
             fill: !this.props.isLight ? "#ffffff" : "#4b6a9b",

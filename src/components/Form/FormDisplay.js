@@ -17,11 +17,6 @@ class FormDisplay extends Component {
             : "0 1rem 2rem rgb(43, 52, 66,.15)",
         }}
       >
-        <img
-          className={classes["desktop-image"]}
-          src={this.props.image}
-          alt="avatar pfp"
-        />
         <div className={classes["display-primary-cont"]}>
           <img
             className={classes.image}
@@ -39,15 +34,6 @@ class FormDisplay extends Component {
             >
               Joined {this.props.joined[2]} {this.props.joined[1]}{" "}
               {this.props.joined[0]}
-            </p>
-            <p
-              className={classes["desktop-biography"]}
-              style={{
-                color: !this.props.isLight ? "#ffffff" : "#4b6a9b",
-                opacity: this.props.bio ? "100%" : "50%",
-              }}
-            >
-              {this.props.bio ? this.props.bio : "This profile has no bio"}
             </p>
           </div>
         </div>
@@ -125,9 +111,7 @@ class FormDisplay extends Component {
               {this.props.location ? this.props.location : "Not Available"}
             </p>
           </div>
-          <div
-            className={`${classes["detail-cont"]} ${classes["website-cont"]}`}
-          >
+          <div className={classes["detail-cont"]}>
             <Website isLight={this.props.isLight} blog={this.props.blog} />
             {!this.props.blog ? (
               <p
@@ -151,9 +135,7 @@ class FormDisplay extends Component {
               </a>
             )}
           </div>
-          <div
-            className={`${classes["detail-cont"]} ${classes["twitter-cont"]}`}
-          >
+          <div className={classes["detail-cont"]}>
             <Twitter
               isLight={this.props.isLight}
               twitter={this.props.twitter}

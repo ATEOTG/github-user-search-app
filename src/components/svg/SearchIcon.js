@@ -1,11 +1,9 @@
 import { Component } from "react";
-import classes from "./SearchIcon.module.css";
 
 class SearchIcon extends Component {
   render() {
     return (
       <svg
-        className={classes["search-icon"]}
         style={{ marginRight: ".5rem" }}
         height="24"
         width="25"
