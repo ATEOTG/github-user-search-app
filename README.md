@@ -3,7 +3,7 @@ App that allows a person to search for a user's relevant Github information.
 
 ### LIVE SITE
 
-Site is here: 
+Site is here: https://ateotg.github.io/github-user-search-app/
 
 ### Screenshots
 
