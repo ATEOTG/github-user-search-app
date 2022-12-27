@@ -11,6 +11,7 @@ const Input = styled.input`
   width: 65%;
   justify-self: stretch;
   color: ${(props) => (!props.isLight ? "#ffffff" : "#2b3442")};
+  cursor: pointer;
 
   &::placeholder {
     color: ${(props) => (!props.isLight ? "rgba(255,255,255,100)" : "#4b6a9b")};
@@ -20,6 +21,14 @@ const Input = styled.input`
   &:focus {
     outline: none;
     caret-color: #0079ff;
+  }
+
+  @media (min-width: 48em) {
+    font-size: 1.8rem;
+  }
+
+  @media (min-width: 75em) {
+    margin-right: 6rem;
   }
 `;
 
@@ -54,11 +63,21 @@ class Form extends Component {
       company: "",
       blog: "",
       image: "",
+      isFound: true,
     };
   }
 
   async searchUser(user) {
     const response = await fetch(`https://api.github.com/users/${user}`);
+
+    if (!response.ok) {
+      this.setState(() => {
+        return { isFound: false };
+      });
+      this.myRef.current.value = "";
+      return;
+    }
+
     const data = await response.json();
 
     const date = data.created_at.split("-");
@@ -77,22 +96,21 @@ class Form extends Component {
         company: data.company,
         blog: data.blog,
         image: data.avatar_url,
+        isFound: true,
       };
     });
-    console.log(data);
+    this.myRef.current.value = "";
   }
 
   userChangeHandler(e) {
     e.preventDefault();
-    this.setState(() => {
-      return { user: this.myRef.current.value };
-    });
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.user !== this.state.user) {
-      this.searchUser(this.state.user);
+    if (
+      this.myRef.current.value.toLowerCase() === this.state.user.toLowerCase()
+    ) {
+      this.myRef.current.value = "";
+      return;
     }
+    this.searchUser(this.myRef.current.value);
   }
 
   componentDidMount() {
@@ -114,16 +132,34 @@ class Form extends Component {
           <SearchIcon />
           <Input
             isLight={this.props.isLight}
+            onKeyPress={() => {
+              if (this.state.isFound) return;
+              this.setState(() => {
+                return { isFound: true };
+              });
+            }}
             type="text"
             placeholder="Search GitHub username…"
             ref={this.myRef}
           />
-          <button
-            onClick={this.userChangeHandler.bind(this)}
-            className={classes["search-btn"]}
-          >
-            Search
-          </button>
+          <div className={classes["button-div"]}>
+            <button
+              onClick={this.userChangeHandler.bind(this)}
+              className={classes["search-btn"]}
+            >
+              Search
+            </button>
+            {!this.state.isFound && (
+              <p
+                style={{
+                  backgroundColor: !this.props.isLight ? "#1e2a47" : "#fefefe",
+                }}
+                className={classes.error}
+              >
+                No results
+              </p>
+            )}
+          </div>
         </form>
         <FormDisplay
           isLight={this.props.isLight}
