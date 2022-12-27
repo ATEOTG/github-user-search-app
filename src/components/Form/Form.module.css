@@ -24,36 +24,3 @@
 .search-btn:hover {
   background-color: #4d9efc;
 }
-
-.button-div {
-  position: relative;
-}
-
-.error {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-115%, 85%);
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: #f74646;
-}
-
-@media (min-width: 48em) {
-  .form-search {
-    justify-content: space-between;
-    gap: 0;
-    margin-bottom: 3rem;
-  }
-
-  .search-btn {
-    font-size: 1.6rem;
-    padding: 1.5rem 2.5rem;
-  }
-}
-
-@media (min-width: 75em) {
-  .error {
-    font-size: 1.5rem;
-  }
-}
