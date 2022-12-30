@@ -3,7 +3,7 @@ App that allows a person to search for a user's relevant Github information.
 
 ### LIVE SITE
 
-Site is here: 
+Site is here: https://ateotg.github.io/github-user-search-app/
 
 ### Screenshots
 
@@ -26,4 +26,4 @@ Site is here:
 ![Screen Shot 2022-12-27 at 17 31 02](https://user-images.githubusercontent.com/25332391/209729462-1d96c1fa-c90b-40ed-b731-b879fe223d02.png)
 
 ### Technologies used
-React (class components), CSS grid/flexbox, Github USER API
+React (class components), CSS grid/flexbox, Github USER API, styled components
